@@ -1,31 +1,39 @@
-{%extends "layout.html"%}
+{% extends "layout.html" %}
 {%block content%}
-<div class="projects">
-    <h1>My recent projects</h1>
-        <strong>
-            <nav>
-                <ul class="menu_projects">
-                    <li><a href="https://github.com/erezlev13/Online-Marketing-System">
-                        Online marketing system - C++
-                    </a>
-                        <p>
-                            This project built as part of Object-Oriented programming in C++.<br>
-                            At this project you can see some Object-Oriented programming elements as: Polymorphism, Encapsulation and Inheritance.<br>
-                            Furthermore, there is using in Templates and multiple Inheritance.
-                        </p>
-                    </li>
-                    <li><a href="https://github.com/erezlev13/Find-Your-Cofeece/tree/master/app/src">
-                        Cofeece - Kotlin
-                    </a></li>
-                    <li><a href="{{ url_for('projects') }}">Personal Website - Python</a></li>
-                </ul>
-            </nav>
-        </strong>
-    <p>
-        Here you can find some projects of mine.<br>
-        The projects written in C++, Kotlin and Python.<br>
-        The most interesting, in my opinion, is the Android App project.<br>
-        You are more than welcome to check out my projects! :)
-    </p>
+<div class="project">
+    <dl class="projects">
+        <div class="project">
+            <a class='image' href=""><img
+                    src=""/></a>
+            <div class='content'>
+                <dt><h3><a href="https://github.com/erezlev13/Online-Marketing-System">Online marketing system</a></h3>
+                </dt>
+                <dd><p>E-commerce system, written in C++. <b>Need to add more details..</b>
+                </p></dd>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <a class='image' href=""><img
+                    src=""/></a>
+            <div class='content'>
+                <dt><h3><a href="https://github.com/erezlev13/Find-Your-Cofeece">Cofeece</a></h3></dt>
+                <dd><p>Give comfortable solution to work in a restaurant. Created in Android, Kotlin, XML</p></dd>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <a class='image' href=""><img
+                    src=""/></a>
+            <div class='content'>
+                <dt><h3><a href="https://github.com/erezlev13/Personal-Website">Personal Website}</a></h3></dt>
+                <dd><p>Portfolio website for presenting my prjects. Created in Python, as long with Flask, HTML,
+                    CSS.</p></dd>
+            </div>
+        </div>
+
+    </dl>
 </div>
 {%endblock%}
