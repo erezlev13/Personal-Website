@@ -1,124 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
     <title>Erez Lev's website</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
+
 <body>
 
-<style>
-    .center {
-        display: block;
-        margin-left: 200px;
-        margin-right: 200px;
-        padding: 5px;
-    }
-
-    .header {
-        width: 100%;
-        margin-left: 40%;
-        margin-right: 50%;
-        height: fit-content;
-        background: none;
-    }
-
-    .header img {
-        margin-top: 50px;
-        margin-left: 5px;
-        margin-right: 50%;
-        image-orientation: flip;
-        width: 190px;
-        height: 170px;
-    }
-
-    .header-headline {
-        margin-top: 20px;
-        margin-bottom: 50px;
-        margin-right: 20px;
-        text-orientation: initial;
-    }
-
-    .icons {
-        float: left;
-        display: inline-block;
-        background: none;
-    }
-
-    .icons li {
-        display: inline;
-    }
-
-    .icons li + li {
-        margin-left: 20px;
-    }
-
-    .icons a {
-
-    }
-
-    .line-nav-1 a {
-    display: block;
-    margin: 0 1rem;
-    color: #6f777d;
-    text-decoration: none;
-    }
-    .line-nav-toggle {
-        -ms-flex-item-align: center;
-        align-self: center;
-        height: 2rem;
-        border: 0;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    .line-nav {
-        float: left;
-        margin-left: 10px;
-        margin-top: 20px;
-    }
-
-    .line-nav a {
-        display: inline;
-    margin: 0 1rem;
-    color: #6f777d;
-    text-decoration: none;
-    }
-
-    .line-nav dd {
-        display: inline;
-    }
-
-    .line-nav dd + dd {
-        margin-left: 35px;
-    }
-</style>
-
-
-<div class="container-fluid">
+<div class="container">
     <nav>
-            <dl class="line-nav">
-                <dd><a href="{{ url_for('home') }}">Home</a> </dd>
-                <dd><a href="{{ url_for('projects') }}">Projects</a> </dd>
-            </dl>
-        </nav>
+        <dl class="line-nav">
+            <dd><a href="{{ url_for('home') }}">Home</a></dd>
+            <dd><a href="{{ url_for('projects') }}">Projects</a></dd>
+        </dl>
+    </nav>
 </div>
-<div class="container-fluid">
-    <header class="header center">
 
-            <img src="/static/css/images/profile_picture.jpg"/>
-        <h1>
-            <h5 class="header-headline"><big>My Business Card</big></h5>
-        </h1>
+<div class="container">
+    <header>
+        <div class="image">
+            <img class="center rounded-circle" src="/static/css/images/profile_picture.jpg"/>
+        </div>
+        <h5 class="center"><big>My Business Card</big></h5>
     </header>
-    <hr/>
-</div>
-<div class="container content">
-    {%block content%}
-    {%endblock%}
 </div>
 <hr/>
 
+<div class="container">
+    <div class="row">
+        <div class="offset-1 col-2">
+            <ul class="sidebar">
+                <li><a href="https://github.com/erezlev13">GitHub</a></li>
+                <li><a href="https://github.com/erezlev13"><i class="fa fa-github"></i>Linkedin</a></li>
+                <li><a href="https://github.com/erezlev13">Facebook</a></li>
+                <li><a href="https://github.com/erezlev13">Instagram</a></li>
+            </ul>
+        </div>
+
+    <div class="offset-3 col-10">
+        {%block content%}
+        {%endblock%}
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 </html>
